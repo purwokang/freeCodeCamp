@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form - freeCodeCamp Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
+        <h1 id="title" class="text-center">
+          Survey Form - freeCodeCamp Project
+        </h1>
+        <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
+        <p id="description" class="description text-center">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+
+      <!-- User Story #3: I can see a form with id="survey-form". -->
+      <form id="survey-form">
+        <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name". -->
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <!-- User Story #5: Inside the form element, I am required to enter an email in a field with id="email". -->
+        <!-- User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <!-- User Story #7: Inside the form, I can enter a number in a field with id="number". -->
+
+        <!-- User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. -->
+
+        <!-- User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. -->
+
+        <!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". -->
+
+        <!-- User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. -->
+
+        <div class="form-group">
+          <label for="number" id="number-label">
+            Age <span class="clue">(Optional)</span>
+          </label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="7"
+            max="100"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+
+        <!-- User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". -->
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select name="role" id="dropdown" class="form-control" required>
+            <option disabled selected value>Select current role </option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option disabled value
+              >Jobless<span class="clue"
+                >(This option is disabled)</span
+              ></option
+            >
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
+        <div class="form-group">
+          <p>Would you recommend freeCodeCamp to a frient?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />
+            Maybe</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />
+            Not sure</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely-no"
+              type="radio"
+              class="input-radio"
+              disabled
+            />
+            Definitely No<span class="clue">(Option is disabled)</span></label
+          >
+        </div>
+        <div class="form-group">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled="" selected="" value="">Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
+        <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
+        <div class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label>
+            <input
+              name="prefer"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Front-end Projects
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Back-end Projects
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="data-visualization"
+              type="checkbox"
+              class="input-checkbox"
+            />Data Visualization
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="challenges"
+              type="checkbox"
+              class="input-checkbox"
+            />Challenges
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="open-source-community"
+              type="checkbox"
+              class="input-checkbox"
+            />Open Source Community
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="gitter-help-rooms"
+              type="checkbox"
+              class="input-checkbox"
+            />Gitter help rooms
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="videos"
+              type="checkbox"
+              class="input-checkbox"
+            />Videos
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="city-meetups"
+              type="checkbox"
+              class="input-checkbox"
+            />City Meetups
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="wiki"
+              type="checkbox"
+              class="input-checkbox"
+            />Wiki
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="forum"
+              type="checkbox"
+              class="input-checkbox"
+            />Forum
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="additional-courses"
+              type="checkbox"
+              class="input-checkbox"
+              checked
+            />Additional Courses<span class="clue"
+              >(Option is checked on purpose)</span
+            >
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="do-not-know"
+              type="checkbox"
+              class="input-checkbox"
+              disabled
+            />Don't Know
+            <span class="clue">(Option is disabled)</span>
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="react"
+              type="checkbox"
+              class="input-checkbox"
+              disabled
+              checked
+            />Don't Know
+            <span class="clue">(Option is checked & disabled)</span>
+          </label>
+        </div>
+
+        <!-- User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <!-- User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

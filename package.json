@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
+    "eslint": "^7.13.0",
     "serve": "^11.2.0"
   }
 }
